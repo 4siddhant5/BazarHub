@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <!-- Frosted glass background -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cardBackgroundColor="#CCFFFFFF"
+        android:cardCornerRadius="20dp"
+        android:cardElevation="8dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/dialogReportTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report product"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#222222"/>
+
+            <EditText
+                android:id="@+id/etReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:layout_marginTop="16dp"
+                android:hint="Why are you reporting this?"
+                android:background="@drawable/bg_edittext_glass"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#555555"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

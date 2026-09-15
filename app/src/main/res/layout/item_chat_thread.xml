@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemChatRoot"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="12dp"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2h"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/tvLastMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last message…"
+        android:textSize="14sp"
+        android:layout_below="@id/tvName"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/tvBadge"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvBadge"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:text="3"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/holo_red_dark"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:padding="2dp"
+        android:minWidth="22dp"
+        android:minHeight="22dp"/>
+
+</RelativeLayout>

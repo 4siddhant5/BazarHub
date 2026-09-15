@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_card">
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/textOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order: #12345"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pending"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 Aug, 10:45 AM"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- Buyer Info (only visible in SellerOrdersActivity) -->
+    <TextView
+        android:id="@+id/textUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buyer: Siddhant"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="8dp">
+
+        <!-- Cancel button for Buyer -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Order"
+            android:visibility="gone"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"/>
+
+        <!-- Seller Controls -->
+        <LinearLayout
+            android:id="@+id/layoutSellerControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginStart="8dp">
+
+            <Button
+                android:id="@+id/btnMarkShipped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Shipped"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/btnMarkDelivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Delivered"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/bg_splash_gradient">
+
+    <TextView
+        android:id="@+id/totalUsersText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Users: 0"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/glass_card_bg"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/pendingProductsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pending Products: 0"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/glass_card_bg"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/todayOrdersText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today’s Orders: 0"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/glass_card_bg"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

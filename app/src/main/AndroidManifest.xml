@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.siddhant.bazarhub">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="BazarHub"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BazarHub">
+
+        <!-- Splash (Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication -->
+        <activity android:name=".LoginActivity" android:exported="true"/>
+        <activity android:name=".RegisterActivity" android:exported="true"/>
+
+        <!-- User side -->
+        <activity android:name=".MainActivity" android:exported="true"/>
+        <activity android:name=".UserDashboardActivity"/>
+        <activity android:name=".CartActivity"/>
+        <activity android:name=".CheckoutActivity"/>
+        <activity android:name=".WishlistActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".ProductDetailsActivity"/>
+        <activity android:name=".PlaceOrderActivity"/>
+        <activity android:name=".PaymentActivity"/>
+        <activity android:name=".MyOrdersActivity"/>
+        <activity android:name=".OrderDetailsActivity"/>
+
+        <!-- Seller side -->
+        <activity android:name=".SellerOrdersActivity"/>
+        <activity android:name=".PendingApprovalsActivity"/>
+
+        <!-- Admin side -->
+        <activity android:name=".AdminDashboardActivity"/>
+        <activity android:name=".AdminAnalyticsActivity"/>
+        <activity android:name=".AdminOrdersActivity"/>
+        <activity android:name=".ManageUsersActivity"/>
+        <activity android:name=".UserManagementActivity"/>
+        <activity android:name=".ReportsActivity"/>
+
+        <!-- Chats -->
+        <activity android:name=".ChatActivity"/>
+
+        <!-- Notification Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Firebase config -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple_500" />
+
+    </application>
+</manifest>
